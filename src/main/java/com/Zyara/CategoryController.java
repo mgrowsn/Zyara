@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,5 +18,9 @@ public class CategoryController {
     @GetMapping("/all")
     public ResponseEntity<List<Category>> getCategory() {
         return new ResponseEntity<>(categoryService.getCategory(), HttpStatus.OK);
+    }
+    @GetMapping("/all/speciality-categories/{categoryId}")
+    public ResponseEntity<List<SpecialityCategory>> getSpecialityCategory(@PathVariable String categoryId) {
+        return new ResponseEntity<>(categoryService.getSpecialityCategory(categoryId), HttpStatus.OK);
     }
 }
