@@ -1,5 +1,6 @@
 package com.Zyara;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -9,6 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/categories")
+@Slf4j
 public class CategoryController {
     @Autowired
     CategoryService categoryService;
@@ -21,7 +23,11 @@ public class CategoryController {
         return new ResponseEntity<>(categoryService.getSpecialityCategory(categoryId), HttpStatus.OK);
     }
     @PostMapping("/popular-categories")
-    public ResponseEntity<List<SpecialityCategory>> popularCategories(@RequestParam(value = "rating", defaultValue = "4") int rating) {
+    public ResponseEntity<List<PopularItems>> popularCategories(@RequestBody Integer rating) {
+        if(rating==null){
+            rating =5;
+        }
+        log.info("rating is {}", rating);
         return new ResponseEntity<>(categoryService.popularCategories(rating), HttpStatus.OK);
     }
 }

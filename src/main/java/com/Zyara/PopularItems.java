@@ -9,6 +9,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class PopularItems {
     private String image;
-    private String name;
+    private String description;
     private String price;
 }
