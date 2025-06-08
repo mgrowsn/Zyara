@@ -20,4 +20,9 @@ public class CategoryService {
         List<SpecialityCategory> list=specialityCategoryRepository.findAllByCategoryId(categoryId);
         return list;
     }
+
+    public List<SpecialityCategory> popularCategories(int rating) {
+        List<SpecialityCategory> list=specialityCategoryRepository.findAllByRatingGreaterThanEqual(rating);
+        return list;
+    }
 }
