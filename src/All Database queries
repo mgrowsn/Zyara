@@ -348,3 +348,15 @@ INSERT INTO item (id, name, sub_product_id) VALUES
   ('st4', 'Art Sketch Book', 'stationery');
 
 
+// 5) Kilos
+INSERT INTO products (id, name) VALUES ('kilos', 'Kilos');
+
+// 6) Mobiles
+INSERT INTO products (id, name) VALUES ('mobiles', 'Mobiles');
+
+// 7) Appliances
+INSERT INTO products (id, name) VALUES ('appliances', 'Appliances');
+
+//8) Flight Bookings
+INSERT INTO products (id, name) VALUES ('flight-bookings', 'Flight Bookings');
+
