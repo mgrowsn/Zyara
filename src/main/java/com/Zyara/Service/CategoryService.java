@@ -1,8 +1,12 @@
-package com.Zyara;
+package com.Zyara.Service;
 
+import com.Zyara.Model.Category;
+import com.Zyara.Dto.PopularItems;
+import com.Zyara.Repository.CategoryRepository;
+import com.Zyara.Model.SpecialityCategory;
+import com.Zyara.Repository.SpecialityCategoryRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

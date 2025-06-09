@@ -1,4 +1,4 @@
-package com.Zyara;
+package com.Zyara.Model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

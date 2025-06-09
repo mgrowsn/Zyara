@@ -1,0 +1,350 @@
+// 1) add fashion
+
+INSERT INTO products (id, name) VALUES ('fashion', 'Fashion');
+
+
+//fashion ka 1st dropdown
+INSERT INTO sub_product (id, name, product_id) VALUES
+  ('saree', 'Saree', 'fashion'),
+  ('kurtis', 'Kurtis', 'fashion'),
+  ('tops', 'Tops', 'fashion'),
+  ('women-jeans', 'Women Jeans', 'fashion'),
+  ('men-jeans', 'Men Jeans', 'fashion'),
+  ('tshirts', 'T-Shirts', 'fashion'),
+  ('shirts', 'Shirts', 'fashion'),
+  ('jackets-men', 'Men Jackets', 'fashion'),
+  ('trousers', 'Trousers', 'fashion');
+
+
+//fashion ka 2nd dropdown
+INSERT INTO item (id, name, sub_product_id) VALUES
+  ('s1', 'Red Silk Saree', 'saree'),
+  ('s2', 'Blue Cotton Saree', 'saree'),
+  ('s3', 'Designer Saree', 'saree'),
+  ('s4', 'Partywear Saree', 'saree'),
+  ('s5', 'Plain Saree', 'saree'),
+  ('s6', 'Chiffon Saree', 'saree'),
+  ('s7', 'Kanjeevaram Saree', 'saree'),
+  ('s8', 'Net Saree', 'saree');
+
+
+
+
+  INSERT INTO item (id, name, sub_product_id) VALUES
+    ('k1', 'Floral Kurti', 'kurtis'),
+    ('k2', 'Straight Cut Kurti', 'kurtis'),
+    ('k3', 'Anarkali Kurti', 'kurtis'),
+    ('k4', 'Cotton Kurti', 'kurtis'),
+    ('k5', 'Printed Kurti', 'kurtis'),
+    ('k6', 'Sleeveless Kurti', 'kurtis'),
+    ('k7', 'Tunic Kurti', 'kurtis'),
+    ('k8', 'Chikankari Kurti', 'kurtis');
+
+
+    INSERT INTO item (id, name, sub_product_id) VALUES
+      ('wj1', 'High Waist Skinny Jeans', 'women-jeans'),
+      ('wj2', 'Ripped Blue Jeans', 'women-jeans'),
+      ('wj3', 'Boyfriend Fit Jeans', 'women-jeans'),
+      ('wj4', 'Straight Cut Jeans', 'women-jeans'),
+      ('wj5', 'Black Jeggings', 'women-jeans'),
+      ('wj6', 'Wide Leg Jeans', 'women-jeans'),
+      ('wj7', 'Slim Fit Jeans', 'women-jeans'),
+      ('wj8', 'Flared Jeans', 'women-jeans');
+
+
+
+      INSERT INTO item (id, name, sub_product_id) VALUES
+        ('tp1', 'Crop Top', 'tops'),
+        ('tp2', 'Sleeveless Top', 'tops'),
+        ('tp3', 'Tank Top', 'tops'),
+        ('tp4', 'Peplum Top', 'tops'),
+        ('tp5', 'Wrap Top', 'tops'),
+        ('tp6', 'Long Sleeve Top', 'tops'),
+        ('tp7', 'Bardot Top', 'tops'),
+        ('tp8', 'Cold Shoulder Top', 'tops');
+
+
+        INSERT INTO item (id, name, sub_product_id) VALUES
+          ('ts1', 'Round Neck T-Shirt', 'tshirts'),
+          ('ts2', 'V-Neck T-Shirt', 'tshirts'),
+          ('ts3', 'Printed T-Shirt', 'tshirts'),
+          ('ts4', 'Oversized T-Shirt', 'tshirts'),
+          ('ts5', 'Striped T-Shirt', 'tshirts'),
+          ('ts6', 'Graphic Tee', 'tshirts'),
+          ('ts7', 'Henley T-Shirt', 'tshirts'),
+          ('ts8', 'Plain T-Shirt', 'tshirts');
+
+
+
+          INSERT INTO item (id, name, sub_product_id) VALUES
+            ('sh1', 'Formal White Shirt', 'shirts'),
+            ('sh2', 'Checked Shirt', 'shirts'),
+            ('sh3', 'Denim Shirt', 'shirts'),
+            ('sh4', 'Linen Shirt', 'shirts'),
+            ('sh5', 'Printed Shirt', 'shirts'),
+            ('sh6', 'Striped Shirt', 'shirts'),
+            ('sh7', 'Half Sleeve Shirt', 'shirts'),
+            ('sh8', 'Casual Cotton Shirt', 'shirts');
+
+
+            INSERT INTO item (id, name, sub_product_id) VALUES
+              ('mj1', 'Slim Fit Jeans', 'men-jeans'),
+              ('mj2', 'Tapered Jeans', 'men-jeans'),
+              ('mj3', 'Straight Jeans', 'men-jeans'),
+              ('mj4', 'Ripped Jeans', 'men-jeans'),
+              ('mj5', 'Baggy Jeans', 'men-jeans'),
+              ('mj6', 'Distressed Jeans', 'men-jeans'),
+              ('mj7', 'Black Jeans', 'men-jeans'),
+              ('mj8', 'Dark Blue Jeans', 'men-jeans');
+
+
+
+INSERT INTO item (id, name, sub_product_id) VALUES
+  ('j1', 'Leather Jacket', 'jackets-men'),
+  ('j2', 'Denim Jacket', 'jackets-men'),
+  ('j3', 'Bomber Jacket', 'jackets-men'),
+  ('j4', 'Windcheater', 'jackets-men'),
+  ('j5', 'Hooded Jacket', 'jackets-men'),
+  ('j6', 'Blazer', 'jackets-men'),
+  ('j7', 'Puffer Jacket', 'jackets-men'),
+  ('j8', 'Varsity Jacket', 'jackets-men');
+
+
+
+INSERT INTO item (id, name, sub_product_id) VALUES
+  ('tr1', 'Formal Black Trousers', 'trousers'),
+  ('tr2', 'Slim Fit Trousers', 'trousers'),
+  ('tr3', 'Chinos', 'trousers'),
+  ('tr4', 'Joggers', 'trousers'),
+  ('tr5', 'Casual Grey Trousers', 'trousers'),
+  ('tr6', 'Pleated Trousers', 'trousers'),
+  ('tr7', 'Stretch Trousers', 'trousers'),
+  ('tr8', 'Printed Trousers', 'trousers');
+
+
+
+
+
+
+
+  // 2) Electronics
+
+INSERT INTO products (id, name) VALUES ('electronics', 'Electronics');
+
+
+//electronics ka 1st dropdown
+INSERT INTO sub_product (id, name, product_id) VALUES
+  ('mobiles', 'Mobiles', 'electronics'),
+  ('laptops', 'Laptops', 'electronics'),
+  ('tablets', 'Tablets', 'electronics'),
+  ('televisions', 'Televisions', 'electronics'),
+  ('headphones', 'Headphones', 'electronics'),
+  ('speakers', 'Speakers', 'electronics'),
+  ('cameras', 'Cameras', 'electronics'),
+  ('smartwatches', 'Smart Watches', 'electronics');
+
+// electronics ka 2nd dropdown
+INSERT INTO item (id, name, sub_product_id) VALUES
+  ('m1', 'iPhone 15', 'mobiles'),
+  ('m2', 'Samsung Galaxy S24', 'mobiles'),
+  ('m3', 'OnePlus 12', 'mobiles'),
+  ('m4', 'Google Pixel 8', 'mobiles'),
+  ('m5', 'Realme Narzo', 'mobiles'),
+  ('m6', 'iQOO Z9', 'mobiles'),
+  ('m7', 'Motorola Edge', 'mobiles'),
+  ('m8', 'Redmi Note 13', 'mobiles');
+
+
+INSERT INTO item (id, name, sub_product_id) VALUES
+  ('l1', 'MacBook Air M2', 'laptops'),
+  ('l2', 'Dell Inspiron', 'laptops'),
+  ('l3', 'HP Pavilion', 'laptops'),
+  ('l4', 'Lenovo ThinkPad', 'laptops');
+
+
+INSERT INTO item (id, name, sub_product_id) VALUES
+  ('t1', 'iPad Air', 'tablets'),
+  ('t2', 'Samsung Galaxy Tab S9', 'tablets'),
+  ('t3', 'Lenovo Tab M10', 'tablets'),
+  ('t4', 'Realme Pad X', 'tablets'),
+  ('t5', 'Redmi Pad SE', 'tablets'),
+  ('t6', 'Nokia T20', 'tablets'),
+  ('t7', 'Motorola Tab G62', 'tablets'),
+  ('t8', 'OnePlus Pad', 'tablets');
+
+
+INSERT INTO item (id, name, sub_product_id) VALUES
+  ('tv1', 'Samsung 43" 4K UHD', 'televisions'),
+  ('tv2', 'Sony Bravia 55"', 'televisions'),
+  ('tv3', 'LG Smart TV 50"', 'televisions'),
+  ('tv4', 'Xiaomi Mi TV 5X', 'televisions'),
+  ('tv5', 'OnePlus Y1S Pro', 'televisions'),
+  ('tv6', 'Realme Smart TV X', 'televisions'),
+  ('tv7', 'TCL 40" FHD', 'televisions'),
+  ('tv8', 'Panasonic 4K LED', 'televisions');
+
+
+
+INSERT INTO item (id, name, sub_product_id) VALUES
+  ('h1', 'Sony WH-1000XM5', 'headphones'),
+  ('h2', 'Bose QuietComfort 45', 'headphones'),
+  ('h3', 'Boat Rockerz 450', 'headphones'),
+  ('h4', 'JBL Tune 760NC', 'headphones'),
+  ('h5', 'Sennheiser HD 450BT', 'headphones'),
+  ('h6', 'Realme Buds Wireless', 'headphones'),
+  ('h7', 'Boult Audio BassBoost', 'headphones'),
+  ('h8', 'OnePlus Bullets Wireless Z2', 'headphones');
+
+
+INSERT INTO item (id, name, sub_product_id) VALUES
+  ('s1', 'JBL Flip 6', 'speakers'),
+  ('s2', 'Boat Stone 1200', 'speakers'),
+  ('s3', 'Sony SRS-XB13', 'speakers'),
+  ('s4', 'Marshall Emberton', 'speakers'),
+  ('s5', 'Zebronics Zeb-Rocky', 'speakers'),
+  ('s6', 'Realme Cobble', 'speakers'),
+  ('s7', 'MI Portable Bluetooth', 'speakers'),
+  ('s8', 'Philips TAS2505', 'speakers');
+
+
+INSERT INTO item (id, name, sub_product_id) VALUES
+  ('c1', 'Canon EOS 200D II', 'cameras'),
+  ('c2', 'Nikon D5600', 'cameras'),
+  ('c3', 'Sony Alpha ILCE-6400', 'cameras'),
+  ('c4', 'Fujifilm X-T30 II', 'cameras'),
+  ('c5', 'Panasonic Lumix G7', 'cameras'),
+  ('c6', 'GoPro HERO12', 'cameras'),
+  ('c7', 'Canon PowerShot G7X', 'cameras'),
+  ('c8', 'DJI Pocket 2', 'cameras');
+
+
+INSERT INTO item (id, name, sub_product_id) VALUES
+  ('sw1', 'Apple Watch Series 9', 'smartwatches'),
+  ('sw2', 'Samsung Galaxy Watch 6', 'smartwatches'),
+  ('sw3', 'Noise ColorFit Ultra', 'smartwatches'),
+  ('sw4', 'Fire-Boltt Invincible Plus', 'smartwatches'),
+  ('sw5', 'Amazfit GTS 4', 'smartwatches'),
+  ('sw6', 'boAt Wave Sigma', 'smartwatches'),
+  ('sw7', 'Fossil Gen 6', 'smartwatches'),
+  ('sw8', 'Realme Watch 3 Pro', 'smartwatches');
+
+
+
+
+// 3) Home & Furniture
+INSERT INTO products (id, name) VALUES ('home-furniture', 'Home & Furniture');
+
+//home-furniture ka 1st dropdown
+INSERT INTO sub_product (id, name, product_id) VALUES
+  ('sofa', 'Sofas & Recliners', 'home-furniture'),
+  ('beds', 'Beds & Mattresses', 'home-furniture'),
+  ('dining', 'Dining Furniture', 'home-furniture'),
+  ('wardrobes', 'Wardrobes', 'home-furniture'),
+  ('decor', 'Home Decor', 'home-furniture'),
+  ('lighting', 'Lighting', 'home-furniture');
+
+//home-furniture ka 2nd dropdown
+INSERT INTO item (id, name, sub_product_id) VALUES
+  ('sf1', '3-Seater Leather Sofa', 'sofa'),
+  ('sf2', 'Fabric Recliner', 'sofa'),
+  ('sf3', 'L-Shaped Sectional Sofa', 'sofa'),
+  ('sf4', 'Wooden Sofa Set', 'sofa');
+
+
+INSERT INTO item (id, name, sub_product_id) VALUES
+  ('b1', 'Queen Size Bed with Storage', 'beds'),
+  ('b2', 'King Size Wooden Bed', 'beds'),
+  ('b3', 'Single Metal Bed', 'beds'),
+  ('b4', 'Upholstered Bed with Headboard', 'beds');
+
+
+INSERT INTO item (id, name, sub_product_id) VALUES
+  ('d1', 'Wall Art Canvas Set', 'decor'),
+  ('d2', 'Ceramic Flower Vase', 'decor'),
+  ('d3', 'Abstract Sculpture', 'decor'),
+  ('d4', 'Handmade Wall Clock', 'decor');
+
+
+INSERT INTO item (id, name, sub_product_id) VALUES
+  ('dng1', '4-Seater Dining Table', 'dining'),
+  ('dng2', '6-Seater Glass Dining Set', 'dining'),
+  ('dng3', 'Wooden Dining Bench', 'dining'),
+  ('dng4', 'Marble Top Dining Table', 'dining');
+
+
+INSERT INTO item (id, name, sub_product_id) VALUES
+  ('wd1', '3-Door Wooden Wardrobe', 'wardrobes'),
+  ('wd2', 'Sliding Wardrobe with Mirror', 'wardrobes'),
+  ('wd3', 'Modular Steel Wardrobe', 'wardrobes'),
+  ('wd4', 'Compact Bedroom Almirah', 'wardrobes');
+
+
+INSERT INTO item (id, name, sub_product_id) VALUES
+  ('lg1', 'LED Ceiling Light', 'lighting'),
+  ('lg2', 'Decorative Floor Lamp', 'lighting'),
+  ('lg3', 'Wall Sconce Set', 'lighting'),
+  ('lg4', 'Table Lamp with Shade', 'lighting');
+
+
+
+
+// 4) Beauty, Toys & More
+INSERT INTO products (id, name) VALUES ('beauty-toys-more', 'Beauty, Toys & More');
+
+
+//beauty-toys-more ka 1st dropdown
+
+INSERT INTO sub_product (id, name, product_id) VALUES
+  ('makeup', 'Makeup', 'beauty-toys-more'),
+  ('skincare', 'Skincare', 'beauty-toys-more'),
+  ('toys', 'Toys & Games', 'beauty-toys-more'),
+  ('fitness', 'Fitness Gear', 'beauty-toys-more'),
+  ('grooming', 'Men''s Grooming', 'beauty-toys-more'),
+  ('stationery', 'Stationery', 'beauty-toys-more');
+
+
+//beauty-toys-more ka 2nd dropdown
+INSERT INTO item (id, name, sub_product_id) VALUES
+  ('mk1', 'Liquid Foundation', 'makeup'),
+  ('mk2', 'Matte Lipstick Set', 'makeup'),
+  ('mk3', 'Eyeliner Pen', 'makeup'),
+  ('mk4', 'Blush Palette', 'makeup');
+
+
+
+INSERT INTO item (id, name, sub_product_id) VALUES
+  ('mk1', 'Liquid Foundation', 'makeup'),
+  ('mk2', 'Matte Lipstick Set', 'makeup'),
+  ('mk3', 'Eyeliner Pen', 'makeup'),
+  ('mk4', 'Blush Palette', 'makeup');
+
+INSERT INTO item (id, name, sub_product_id) VALUES
+  ('sc1', 'Vitamin C Face Serum', 'skincare'),
+  ('sc2', 'Aloe Vera Gel', 'skincare'),
+  ('sc3', 'Sunscreen SPF 50', 'skincare'),
+  ('sc4', 'Face Sheet Mask Pack', 'skincare');
+
+INSERT INTO item (id, name, sub_product_id) VALUES
+  ('ty1', 'Remote Control Car', 'toys'),
+  ('ty2', 'Building Blocks Set', 'toys'),
+  ('ty3', 'Soft Teddy Bear', 'toys'),
+  ('ty4', 'Puzzle Game for Kids', 'toys');
+
+INSERT INTO item (id, name, sub_product_id) VALUES
+  ('fg1', 'Yoga Mat', 'fitness'),
+  ('fg2', 'Dumbbell Set 5kg', 'fitness'),
+  ('fg3', 'Resistance Bands', 'fitness'),
+  ('fg4', 'Skipping Rope', 'fitness');
+
+INSERT INTO item (id, name, sub_product_id) VALUES
+  ('mg1', 'Beard Trimmer', 'grooming'),
+  ('mg2', 'Aftershave Balm', 'grooming'),
+  ('mg3', 'Hair Styling Gel', 'grooming'),
+  ('mg4', 'Face Wash for Men', 'grooming');
+INSERT INTO item (id, name, sub_product_id) VALUES
+  ('st1', 'Ball Pens Set', 'stationery'),
+  ('st2', 'Notebooks Pack', 'stationery'),
+  ('st3', 'Highlighters', 'stationery'),
+  ('st4', 'Art Sketch Book', 'stationery');
+
+
