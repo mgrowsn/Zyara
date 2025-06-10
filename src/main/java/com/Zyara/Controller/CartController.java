@@ -1,5 +1,6 @@
 package com.Zyara.Controller;
 
+import com.Zyara.Dto.CartDto;
 import com.Zyara.Model.CartItem;
 import com.Zyara.Service.CartService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,14 +15,19 @@ import java.util.List;
 public class CartController {
     @Autowired
     CartService cartService;
+
     @PostMapping("/add-to-cart")
     public ResponseEntity<String> addItemToCart(@RequestBody CartItem cartItem){
         return new ResponseEntity(cartService.addItemToCart(cartItem), HttpStatus.CREATED);
     }
 
+    @PutMapping("/update-cart")
+    public ResponseEntity<String> updateCartItem(@RequestBody CartDto cartDto) {
+        return new ResponseEntity<>(cartService.updateCartItem(cartDto), HttpStatus.OK);
+    }
     @DeleteMapping("/remove-from-cart")
-    public ResponseEntity<String> removeItemFromCart(@RequestBody CartItem cartItem) {
-        return new ResponseEntity<>(cartService.removeItemFromCart(cartItem), HttpStatus.OK);
+    public ResponseEntity<String> removeItemFromCart(@RequestBody int id) {
+        return new ResponseEntity<>(cartService.removeItemFromCart(id), HttpStatus.OK);
     }
 
     @GetMapping("/cart")
