@@ -1,6 +1,7 @@
 package com.Zyara.Controller;
 
 import com.Zyara.Dto.CartDto;
+import com.Zyara.Model.Address;
 import com.Zyara.Model.CartItem;
 import com.Zyara.Service.CartService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,6 +35,26 @@ public class CartController {
     public ResponseEntity<List<CartItem>> getCartItems() {
         List<CartItem> list=cartService.getCartItems();
         return new ResponseEntity<>(list, HttpStatus.OK);
+    }
+
+
+    @PostMapping("/add-address-to-cart")
+    public ResponseEntity<String> addAddressToCart(@RequestBody Address address){
+        return new ResponseEntity(cartService.addAddressToCart(address), HttpStatus.CREATED);
+    }
+
+    @PutMapping("/update-address-cart")
+    public ResponseEntity<String> updateAddressInCart(@RequestBody Address address) {
+        return new ResponseEntity<>(cartService.updateAddressInCart(address), HttpStatus.OK);
+    }
+    @DeleteMapping("/delete-address-from-cart")
+    public ResponseEntity<String> DeleteAddressFromCart(@RequestBody int id) {
+        return new ResponseEntity<>(cartService.deleteAddressFromCart(id), HttpStatus.OK);
+    }
+
+    @GetMapping("/get/all-addresses-in-cart")
+    public ResponseEntity<List<Address>> getAllAddressesInCart() {
+        return new ResponseEntity<>(cartService.getAllAddressesInCart(), HttpStatus.OK);
     }
 
 }
