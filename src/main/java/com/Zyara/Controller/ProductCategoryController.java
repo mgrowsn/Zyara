@@ -2,7 +2,7 @@ package com.Zyara.Controller;
 
 import com.Zyara.Model.Item;
 import com.Zyara.Dto.ProductDto;
-import com.Zyara.Service.ProductService;
+import com.Zyara.Service.ProductCategoryService;
 import com.Zyara.Model.SubProduct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -15,9 +15,9 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 @RestController
 @CrossOrigin(origins = "http://localhost:3000")
-public class ProductController {
+public class ProductCategoryController {
     @Autowired
-    ProductService productService;
+    ProductCategoryService productService;
     @GetMapping("/all/products")
     public ResponseEntity<List<ProductDto>> getProducts(){
         return new ResponseEntity<>(productService.getProducts(), HttpStatus.OK);

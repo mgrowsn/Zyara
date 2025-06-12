@@ -1,24 +1,31 @@
 package com.Zyara.Service;
 
 import com.Zyara.Model.Address;
-import com.Zyara.Dto.CartDto;
 import com.Zyara.Model.CartItem;
+import com.Zyara.Model.Product;
 import com.Zyara.Repository.AddressRepo;
 import com.Zyara.Repository.CartRepo;
+import com.Zyara.Repository.ProductRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class CartService {
     @Autowired
+    ProductRepo productRepo;
+    @Autowired
     CartRepo cartRepo;
     @Autowired
     AddressRepo addressRepo;
     public String addItemToCart(CartItem cartItem) {
-        if(cartItem==null || cartItem.getQuantity() <= 0) {
-            return "Invalid cart item";
+        int productId=cartItem.getId();
+        Product product=productRepo.findById(productId).orElse(null);
+
+        if(product==null) {
+            return "Product not available";
         }
         cartRepo.save(cartItem);
         return "Item added to cart successfully";
@@ -32,38 +39,65 @@ public class CartService {
         return "Item removed from cart successfully";
     }
 
-    public List<CartItem> getCartItems() {
+    public List<Product> getCartItems() {
         List<CartItem> list=cartRepo.findAll();
-        return list;
+        List<Product> products=new ArrayList<>();
+        for(CartItem item:list){
+            Product product=productRepo.findById(item.getId()).orElse(null);
+            if(products!=null){
+                products.add(product);
+            }
+        }
+        return products;
     }
 
-    public String updateCartItem(CartDto cartDto) {
-        CartItem cartItem=cartRepo.findById(cartDto.getId()).orElse(null);
-        if(cartItem == null) {
-            return "Item not found in cart";
+    public String updateCartItem(CartItem cartItem) {
+        CartItem item=cartRepo.findById(cartItem.getId()).orElse(null);
+        if(item == null) {
+            return "Product not found in cart";
         }
-        cartItem.setQuantity(cartDto.getQuantity());
+        item.setQuantity(cartItem.getQuantity());
         cartRepo.save(cartItem);
         return "Cart item updated successfully";
     }
 
     public String addAddressToCart(Address address) {
-        if(address==null || address.getAddress().isEmpty()) {
-            return "Invalid address";
+        if(!validationToAddAddress(address).equals("Valid Address")){
+            return validationToAddAddress(address);
         }
         addressRepo.save(address);
         return "Address added successfully";
     }
 
+    private String validationToAddAddress(Address address) {
+        if(address.getAddress() == null || address.getCity() == null || address.getCountry() == null ||
+                address.getPhoneNumber() == null || address.getPincode() == null || address.getState() == null) {
+            return "Please provide all required fields for the address";
+        }
+        if(address.getPhoneNumber().length() != 10) {
+            return "Phone number must be 10 digits long";
+        }
+        if(address.getPincode().length() != 6) {
+            return "Pincode must be 6 digits long";
+        }
+        return "Valid Address";
+    }
+
     public String updateAddressInCart(Address address) {
-        if(address == null || address.getAddress() == null) {
-            return "Please provide valid address to update";
+        if(!validationToAddAddress(address).equals("Valid Address")){
+            return validationToAddAddress(address);
         }
         Address existingAddress=addressRepo.findById(address.getId()).orElse(null);
         if(existingAddress==null){
             return "Address not found";
         }
         existingAddress.setAddress(address.getAddress());
+        existingAddress.setAddress(address.getCity());
+        existingAddress.setAddress(address.getCountry());
+        existingAddress.setAddress(address.getPhoneNumber());
+        existingAddress.setAddress(address.getPincode());
+        existingAddress.setAddress(address.getState());
+        existingAddress.setAddress(address.getLandmark());
         addressRepo.save(address);
         return "Address updated successfully";
     }

@@ -10,7 +10,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Products {
+public class ProductCategory {
     @Id
     private String id;
     private String image;

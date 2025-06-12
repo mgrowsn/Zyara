@@ -1,24 +1,22 @@
 package com.Zyara.Model;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@Entity
 @AllArgsConstructor
 @NoArgsConstructor
-public class SpecialityCategory {
+@Entity
+public class Product {
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private Long id;
-    private String categoryId;
+    private int id;
+    private String name;
     private String image;
     private String description;
-    private String price;
+    private String categoryId;
+    private double price;
     private int rating;
 }

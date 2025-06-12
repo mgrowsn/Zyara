@@ -1,9 +1,9 @@
 package com.Zyara.Controller;
 
+import com.Zyara.Model.Product;
 import com.Zyara.Service.CategoryService;
 import com.Zyara.Model.Category;
 import com.Zyara.Dto.PopularItems;
-import com.Zyara.Model.SpecialityCategory;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -24,7 +24,7 @@ public class CategoryController {
         return new ResponseEntity<>(categoryService.getCategory(), HttpStatus.OK);
     }
     @GetMapping("/all/speciality-categories/{categoryId}")
-    public ResponseEntity<List<SpecialityCategory>> getSpecialityCategory(@PathVariable String categoryId) {
+    public ResponseEntity<List<Product>> getSpecialityCategory(@PathVariable String categoryId) {
         return new ResponseEntity<>(categoryService.getSpecialityCategory(categoryId), HttpStatus.OK);
     }
     @PostMapping("/popular-categories")

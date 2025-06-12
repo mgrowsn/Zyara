@@ -1,8 +1,8 @@
 package com.Zyara.Controller;
 
-import com.Zyara.Dto.CartDto;
-import com.Zyara.Model.Address;
 import com.Zyara.Model.CartItem;
+import com.Zyara.Model.Address;
+import com.Zyara.Model.Product;
 import com.Zyara.Service.CartService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -23,7 +23,7 @@ public class CartController {
     }
 
     @PutMapping("/update-cart")
-    public ResponseEntity<String> updateCartItem(@RequestBody CartDto cartDto) {
+    public ResponseEntity<String> updateCartItem(@RequestBody CartItem cartDto) {
         return new ResponseEntity<>(cartService.updateCartItem(cartDto), HttpStatus.OK);
     }
     @DeleteMapping("/remove-from-cart")
@@ -32,9 +32,8 @@ public class CartController {
     }
 
     @GetMapping("/cart")
-    public ResponseEntity<List<CartItem>> getCartItems() {
-        List<CartItem> list=cartService.getCartItems();
-        return new ResponseEntity<>(list, HttpStatus.OK);
+    public ResponseEntity<List<Product>> getCartItems() {
+        return new ResponseEntity<>(cartService.getCartItems(), HttpStatus.OK);
     }
 
 

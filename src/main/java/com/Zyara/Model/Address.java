@@ -14,4 +14,10 @@ public class Address {
     @Id
     private int id;
     private String address;
+    private String city;
+    private String country;
+    private String phoneNumber;
+    private String pincode;
+    private String state;
+    private String landmark;
 }
