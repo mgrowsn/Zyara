@@ -1,5 +1,6 @@
 package com.Zyara.Controller;
 
+import com.Zyara.Dto.CartDto;
 import com.Zyara.Model.CartItem;
 import com.Zyara.Model.Address;
 import com.Zyara.Model.Product;
@@ -9,6 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Collections;
 import java.util.List;
 
 @RestController
@@ -32,7 +34,7 @@ public class CartController {
     }
 
     @GetMapping("/cart")
-    public ResponseEntity<List<Product>> getCartItems() {
+    public ResponseEntity<List<CartDto>> getCartItems() {
         return new ResponseEntity<>(cartService.getCartItems(), HttpStatus.OK);
     }
 
@@ -55,5 +57,4 @@ public class CartController {
     public ResponseEntity<List<Address>> getAllAddressesInCart() {
         return new ResponseEntity<>(cartService.getAllAddressesInCart(), HttpStatus.OK);
     }
-
 }

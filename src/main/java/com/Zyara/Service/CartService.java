@@ -1,5 +1,6 @@
 package com.Zyara.Service;
 
+import com.Zyara.Dto.CartDto;
 import com.Zyara.Model.Address;
 import com.Zyara.Model.CartItem;
 import com.Zyara.Model.Product;
@@ -27,6 +28,9 @@ public class CartService {
         if(product==null) {
             return "Product not available";
         }
+        if(product.getTotalCapacity()==0){
+            return "Sorry, Product is out of stock";
+        }
         cartRepo.save(cartItem);
         return "Item added to cart successfully";
     }
@@ -39,13 +43,22 @@ public class CartService {
         return "Item removed from cart successfully";
     }
 
-    public List<Product> getCartItems() {
+    public List<CartDto> getCartItems() {
         List<CartItem> list=cartRepo.findAll();
-        List<Product> products=new ArrayList<>();
+        List<CartDto> products=new ArrayList<>();
         for(CartItem item:list){
             Product product=productRepo.findById(item.getId()).orElse(null);
-            if(products!=null){
-                products.add(product);
+            if(product!=null){
+                CartDto cartDto=new CartDto();
+                cartDto.setId(item.getId());
+                cartDto.setName(product.getName());
+                cartDto.setPrice(product.getPrice());
+                cartDto.setImage(product.getImage());
+                cartDto.setDescription(product.getDescription());
+                cartDto.setCategoryId(product.getCategoryId());
+                cartDto.setRating(product.getRating());
+                cartDto.setQuantity(item.getQuantity());
+                products.add(cartDto);
             }
         }
         return products;
@@ -53,8 +66,12 @@ public class CartService {
 
     public String updateCartItem(CartItem cartItem) {
         CartItem item=cartRepo.findById(cartItem.getId()).orElse(null);
+        Product product=productRepo.findById(cartItem.getId()).orElse(null);
         if(item == null) {
             return "Product not found in cart";
+        }
+        if(product!=null && cartItem.getQuantity()>product.getTotalCapacity()){
+            return "Sorry, Your Quantity exceeds available stock";
         }
         item.setQuantity(cartItem.getQuantity());
         cartRepo.save(cartItem);

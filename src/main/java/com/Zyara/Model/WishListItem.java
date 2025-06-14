@@ -10,14 +10,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Product {
+public class WishListItem {
     @Id
     private int id;
-    private String name;
-    private String image;
-    private String description;
-    private String categoryId;
-    private double price;
-    private int rating;
-    private int totalCapacity;
 }

@@ -1,7 +1,5 @@
-package com.Zyara.Model;
+package com.Zyara.Dto;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,9 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
-public class Product {
-    @Id
+public class CartDto {
     private int id;
     private String name;
     private String image;
@@ -19,5 +15,5 @@ public class Product {
     private String categoryId;
     private double price;
     private int rating;
-    private int totalCapacity;
+    private int quantity;
 }
