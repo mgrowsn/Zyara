@@ -11,4 +11,7 @@ public interface ProductRepo extends JpaRepository<Product,Integer>{
     List<Product> findAllByCategoryId(String categoryId);
     @Query(value = "SELECT * FROM product WHERE rating<=:rating",nativeQuery = true)
     List<Product> findAllByRatingEqual(@Param("rating") int rating);
+
+    @Query(value="SELECT * FROM product WHERE brand=:brand",nativeQuery = true)
+    List<Product> findAllByBrand(@Param("brand") String brand);
 }

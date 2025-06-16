@@ -20,4 +20,6 @@ public class Product {
     private double price;
     private int rating;
     private int totalCapacity;
+    private String brand;
+    private int discount;
 }

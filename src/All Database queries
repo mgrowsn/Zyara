@@ -380,3 +380,11 @@ INSERT INTO CART_ITEM(id,image,name,price,quantity,rating) VALUES
            "rating": 4,
            "quantity": 1
        }
+
+
+Query to add product
+
+INSERT INTO product(id,total_capacity,category_id,description,brand,discount,image,name,price,rating) VALUES
+(1,4,'clothing','dress','myntra',30,'https://pictures.kartmax.in/live/inside/800x800/sites/aPfvUDpPwMn1ZadNKhP7/product-images/8905745653752/660/TTJ6008272_1.JPG', 'Tokyo Talkies Women Navy Blue Solid Fit And Flare Dresses',849,4),
+(2,4,'clothing','dress','myntra',30,'https://www.aachho.com/cdn/shop/files/46_67bfdfcf-59ac-4a2a-afb0-880473e51223_1080x.png?v=1694260202', 'Salwar Suit Set',1000,4),
+(3,4,'clothing','dress','zara',30,'https://www.aachho.com/cdn/shop/files/46_67bfdfcf-59ac-4a2a-afb0-880473e51223_1080x.png?v=1694260202', 'Salwar Suit Set',1000,4)
