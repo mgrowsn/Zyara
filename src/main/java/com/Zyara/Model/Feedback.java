@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 public class Feedback {
     @Id
     private int feedbackId;
-    private int productId;
+    private String productId;
     private String feedback;
     private String userEmail;
     private int rating;

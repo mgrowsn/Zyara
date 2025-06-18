@@ -34,7 +34,8 @@ public class WishListService {
         if(product == null) {
             return "Product not found";
         }
-        if(!wishListrepo.existsById(id.getId())){
+
+        if(!wishListrepo.existsById(id.getId())) {
             return "Item not found in wishlist";
         }
         wishListrepo.delete(id);

@@ -12,5 +12,5 @@ import lombok.NoArgsConstructor;
 @Entity
 public class WishListItem {
     @Id
-    private int id;
+    private String id;
 }

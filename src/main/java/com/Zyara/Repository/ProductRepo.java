@@ -7,7 +7,7 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
-public interface ProductRepo extends JpaRepository<Product,Integer>{
+public interface ProductRepo extends JpaRepository<Product,String>{
     List<Product> findAllByCategoryId(String categoryId);
     @Query(value = "SELECT * FROM product WHERE rating<=:rating",nativeQuery = true)
     List<Product> findAllByRatingEqual(@Param("rating") int rating);

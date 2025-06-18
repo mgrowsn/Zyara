@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class WishListDto {
-    private int id;
+    private String id;
     private String name;
     private String image;
     private double price;

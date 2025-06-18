@@ -22,7 +22,7 @@ public class CartService {
     @Autowired
     AddressRepo addressRepo;
     public String addItemToCart(CartItem cartItem) {
-        int productId=cartItem.getId();
+        String productId=cartItem.getId();
         Product product=productRepo.findById(productId).orElse(null);
 
         if(product==null) {
@@ -35,7 +35,7 @@ public class CartService {
         return "Item added to cart successfully";
     }
 
-    public String removeItemFromCart(int id) {
+    public String removeItemFromCart(String id) {
         if(!cartRepo.existsById(id)){
             return "Item not found in cart";
         }

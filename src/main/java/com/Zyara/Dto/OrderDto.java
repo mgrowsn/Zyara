@@ -10,5 +10,5 @@ import lombok.NoArgsConstructor;
 public class OrderDto {
     private int orderId;
     private String userEmail;
-    private int productId;
+    private String productId;
 }

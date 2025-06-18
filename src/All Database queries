@@ -1,6 +1,6 @@
 // 1) add fashion
 
-INSERT INTO products (id, name) VALUES ('fashion', 'Fashion');
+INSERT INTO product_category (id, name) VALUES ('fashion', 'Fashion');
 
 
 //fashion ka 1st dropdown
@@ -44,7 +44,7 @@ INSERT INTO item (id, name, sub_product_id) VALUES
     INSERT INTO item (id, name, sub_product_id) VALUES
       ('wj1', 'High Waist Skinny Jeans', 'women-jeans'),
       ('wj2', 'Ripped Blue Jeans', 'women-jeans'),
-      ('wj3', 'Boyfriend Fit Jeans', 'women-jeans'),
+      ('wj3', 'Fit Jeans', 'women-jeans'),
       ('wj4', 'Straight Cut Jeans', 'women-jeans'),
       ('wj5', 'Black Jeggings', 'women-jeans'),
       ('wj6', 'Wide Leg Jeans', 'women-jeans'),
@@ -129,7 +129,7 @@ INSERT INTO item (id, name, sub_product_id) VALUES
 
   // 2) Electronics
 
-INSERT INTO products (id, name) VALUES ('electronics', 'Electronics');
+INSERT INTO products_category_category (id, name) VALUES ('electronics', 'Electronics');
 
 
 //electronics ka 1st dropdown
@@ -232,7 +232,7 @@ INSERT INTO item (id, name, sub_product_id) VALUES
 
 
 // 3) Home & Furniture
-INSERT INTO products (id, name) VALUES ('home-furniture', 'Home & Furniture');
+INSERT INTO products_category_category (id, name) VALUES ('home-furniture', 'Home & Furniture');
 
 //home-furniture ka 1st dropdown
 INSERT INTO sub_product (id, name, product_id) VALUES
@@ -289,7 +289,7 @@ INSERT INTO item (id, name, sub_product_id) VALUES
 
 
 // 4) Beauty, Toys & More
-INSERT INTO products (id, name) VALUES ('beauty-toys-more', 'Beauty, Toys & More');
+INSERT INTO products_category (id, name) VALUES ('beauty-toys-more', 'Beauty, Toys & More');
 
 
 //beauty-toys-more ka 1st dropdown
@@ -349,16 +349,16 @@ INSERT INTO item (id, name, sub_product_id) VALUES
 
 
 // 5) Kilos
-INSERT INTO products (id, name) VALUES ('kilos', 'Kilos');
+INSERT INTO products_category (id, name) VALUES ('kilos', 'Kilos');
 
 // 6) Mobiles
-INSERT INTO products (id, name) VALUES ('mobiles', 'Mobiles');
+INSERT INTO products_category (id, name) VALUES ('mobiles', 'Mobiles');
 
 // 7) Appliances
-INSERT INTO products (id, name) VALUES ('appliances', 'Appliances');
+INSERT INTO products_category (id, name) VALUES ('appliances', 'Appliances');
 
 //8) Flight Bookings
-INSERT INTO products (id, name) VALUES ('flight-bookings', 'Flight Bookings');
+INSERT INTO products_category (id, name) VALUES ('flight-bookings', 'Flight Bookings');
 
 
 
@@ -388,4 +388,120 @@ INSERT INTO product(id,total_capacity,category_id,description,brand,discount,ima
 (1,4,'clothing','dress','myntra',30,'https://pictures.kartmax.in/live/inside/800x800/sites/aPfvUDpPwMn1ZadNKhP7/product-images/8905745653752/660/TTJ6008272_1.JPG', 'Tokyo Talkies Women Navy Blue Solid Fit And Flare Dresses',849,4),
 (2,4,'clothing','dress','myntra',30,'https://www.aachho.com/cdn/shop/files/46_67bfdfcf-59ac-4a2a-afb0-880473e51223_1080x.png?v=1694260202', 'Salwar Suit Set',1000,4),
 (3,4,'clothing','dress','zara',30,'https://www.aachho.com/cdn/shop/files/46_67bfdfcf-59ac-4a2a-afb0-880473e51223_1080x.png?v=1694260202', 'Salwar Suit Set',1000,4)
+
+
+
+
+
+
+
+
+
+INSERT INTO CATEGORY (ID, NAME, DESCRIPTION, IMAGE) VALUES
+
+(1, 'Electronics', 'Gadgets and devices', 'https://media.istockphoto.com/id/993760082/photo/3d-set-of-home-appliances-on-white-background.jpg?s=612x612&w=0&k=20&c=HrfQd_TbAHORYDu29Z-o9538X05OSw0flSPIZdi-aMQ='),
+
+(2, 'Clothing', 'Apparel and fashion', 'https://5.imimg.com/data5/SELLER/Default/2024/9/452918767/IT/TY/IA/12678962/humtum-2-men-and-women-matching-dress.jpg'),
+
+(3, 'Books', 'All kinds of books', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkDVEsbqt7dpYGxMafaPYbXB13InuL2P8Big&s');
+
+
+INSERT INTO CATEGORY (ID, NAME, DESCRIPTION, IMAGE) VALUES
+
+(4, 'Shoes', 'All Branded Shoes', 'https://images.meesho.com/images/products/349887854/eabfl_512.webp'),
+
+(5, 'Groceries', 'Healthy and Fresh', 'https://hips.hearstapps.com/hmg-prod/images/healthy-groceries-bag-66eaef810acf6.jpg'),
+
+(6, 'Toys and Games',' Best Games And Toys','https://thepopinsider.com/wp-content/uploads/sites/6/2020/10/Nintendo_MarioKartLiveHomeCircuit.jpg'),
+
+(7, 'Bags', 'Designer Bags', 'https://images.naptol.com/usr/local/csp/staticContent/product_images/horizontal/750x750/Set-of-6-Printed-travel-bag-1.jpg'),
+
+(8, 'Bedsheets', 'Smooth and Silky', 'https://m.media-amazon.com/images/I/71fa0Niq9VL._AC_UF894,1000_QL80_.jpg');
+
+
+
+INSERT INTO SPECIALITY_CATEGORY (CATEGORY_ID, DESCRIPTION, IMAGE, PRICE, RATING) VALUES
+
+('electronics', 'Wireless Bluetooth Headphones with noise cancellation', 'https://images-cdn.ubuy.co.in/65fbc6dcd850c60b835ae7b4-ht2-hybrid-active-noise-cancelling.jpg', '2999', 4),
+
+('electronics', 'Smart LED TV 43 inch Full HD with voice control', 'https://m.media-amazon.com/images/S/aplus-media-library-service-media/541f0341-e824-47c7-870e-63aff3b1aa8e.__CR0,0,970,600_PT0_SX970_V1___.jpg', '24999', 5),
+
+('electronics', 'Gaming Mouse with RGB lighting and 6 buttons', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTR2tp3rdiVgFRFKobaVUW2TzubOTuLzzcgOQ&s', '1499', 4),
+
+('electronics', 'Portable Power Bank 20000mAh fast charging', 'https://rukminim3.flixcart.com/image/850/1000/xif0q/power-bank/6/i/f/-original-imagrzjf4zp5evhc.jpeg?q=20&crop=false', '1999', 5);
+
+INSERT INTO SPECIALITY_CATEGORY (CATEGORY_ID, DESCRIPTION, IMAGE, PRICE, RATING) VALUES
+
+('clothing', 'Cotton Casual Shirt for Men - Slim Fit, Full Sleeve', 'https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQ4Zsg83ZMlkpjZQkRvkxnAwY-VyKyqfT3Gadlix3s4eFv9DIEzOFyQwjwWfC5Kf0LyfXR_weHnl-NlsqV4bbp75eRgn7Pcz7UCr0BBtnyL', '999', 4),
+
+('clothing', 'Women’s Floral Print A-Line Kurta', 'https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcS5OSRoIOxnBvcsoHYTUfhwSqWTbips_THkkkK5cmOwiZQv7ZvTl6_be4UbqRtm-FoibgKt6wksPlXDjBbNtCP5j1i_J6qPv3tSFOUEdQbintvtl4jyh18T', '1199', 5),
+
+('clothing', 'Men’s Denim Jeans - Stretchable Slim Fit', 'https://assets.myntassets.com/w_412,q_60,dpr_2,fl_progressive/assets/images/13009180/2021/9/18/bb070367-5ecc-4319-ad14-50eb69727c7b1631955283673-The-Indian-Garage-Co-Men-Black-Slim-Fit-Light-Fade-Stretchab-1.jpg', '1499', 4),
+
+('clothing', 'Women’s Winter Jacket - Hooded with Zip Closure', 'https://m.media-amazon.com/images/I/71tyz2LS2mL._AC_UY1100_.jpg', '1999', 5);
+
+
+INSERT INTO SPECIALITY_CATEGORY (CATEGORY_ID, DESCRIPTION, IMAGE, PRICE, RATING) VALUES
+
+('books', 'Atomic Habits by James Clear – Build good habits and break bad ones', 'https://m.media-amazon.com/images/I/71YZwR-ykEL._AC_UF1000,1000_QL80_.jpg', '499', 5),
+
+('books', 'Ikigai: The Japanese Secret to a Long and Happy Life', 'https://www.lowplexbooks.com/cdn/shop/files/MG_2769_800x.jpg?v=1704883669', '399', 4),
+
+('books', 'Rich Dad Poor Dad by Robert Kiyosaki – Financial education for all ages', 'https://thinkmarketingmagazine.com/wp-content/uploads/2023/07/Book-Review-22Rich-Dad-Poor-Dad22-by-Robert-T.-Kiyosaki-.png', '350', 4),
+
+('books', 'The Psychology of Money by Morgan Housel – Timeless lessons on wealth', 'https://sbcstore.in/wp-content/uploads/2023/08/The-Psychology-of-Money-Front-Cover.png', '449', 5);
+
+
+INSERT INTO SPECIALITY_CATEGORY (CATEGORY_ID, DESCRIPTION, IMAGE, PRICE, RATING) VALUES
+
+('shoes', 'Men’s Running Shoes with Lightweight Mesh & Cushioned Sole', 'https://cdn.thewirecutter.com/wp-content/media/2024/11/runningshoes-2048px-09528.jpg?auto=webp&quality=75&width=1024', '1299', 4),
+
+('shoes', 'Women’s Casual Sneakers – White with Soft Insole', 'https://redtape.com/cdn/shop/files/RLL0186_1_1324e335-513d-4206-8e5b-afcfa232da72.jpg?v=1748331055&width=416', '999', 5),
+
+('shoes', 'Men’s Formal Leather Shoes – Black Slip-On', 'https://assets.myntassets.com/w_412,q_60,dpr_2,fl_progressive/assets/images/15346064/2021/9/26/75150489-627c-43fa-9be9-1afecf5f34581632658424756-Louis-Philippe-Men-Formal-Shoes-7481632658424470-1.jpg', '1599', 4),
+
+('shoes', 'Women’s Sports Shoes with Breathable Knit Design', 'https://image.made-in-china.com/43f34j00oZDqQTUWsHcl/Wholesale-Lightweight-Footwear-Supplier-Lady-Flyknit-Breathable-Athletic-Shoes.webp', '1099', 5);
+
+
+
+INSERT INTO SPECIALITY_CATEGORY (CATEGORY_ID, DESCRIPTION, IMAGE, PRICE, RATING) VALUES
+
+('groceries', 'India Gate Basmati Rice – 5 Kg Premium Long Grain', 'https://m.media-amazon.com/images/I/71HIynTMLLL._AC_UF894,1000_QL80_.jpg', '599', 5),
+
+('groceries', 'Tata Salt – 1 Kg Iodized and Vacuum Evaporated', 'https://www.bbassets.com/media/uploads/p/l/241600_9-tata-salt-iodized.jpg', '28', 5),
+
+('groceries', 'Aashirvaad Atta – 10 Kg Whole Wheat Flour', 'https://m.media-amazon.com/images/I/91Lj2AJXfOL._AC_UF1000,1000_QL80_.jpg', '465', 4),
+
+('groceries', 'Fortune Sunlite Refined Sunflower Oil – 1 L Pouch', 'https://rukminim2.flixcart.com/image/750/900/kw9krrk0/edible-oil/p/b/p/1000-sun-lite-oil-pouch-1000ml-pack-of-1-2-pouch-sunflower-oil-original-imag8zjfyqmdug3r.jpeg?q=90&crop=false', '150', 4);
+
+
+INSERT INTO SPECIALITY_CATEGORY (CATEGORY_ID, DESCRIPTION, IMAGE, PRICE, RATING) VALUES
+
+('toys', 'Remote Control Racing Car with Rechargeable Battery', 'https://m.media-amazon.com/images/I/714mlTUvyqL.jpg', '899', 4),
+
+('toys', 'Building Blocks Set – 500 Pieces Educational Toy for Kids', 'https://m.media-amazon.com/images/I/71-rWhIE+ZS.jpg', '749', 5),
+
+('toys', 'Musical Dancing Robot Toy with Lights and Sound', 'https://m.media-amazon.com/images/I/61b8nDQMwoL.jpg', '599', 4),
+
+('toys', 'UNO Card Game – Classic Family Party Game (112 Cards)', 'https://cdn.pixelspray.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/490160800/665/490160800-1.webp', '159', 5);
+
+INSERT INTO SPECIALITY_CATEGORY (CATEGORY_ID, DESCRIPTION, IMAGE, PRICE, RATING) VALUES
+
+('bags', 'F Gear Luxur Brown Laptop Backpack – 25L with USB Charging Port', 'https://www.fgear.in/cdn/shop/products/luxur-black-01.jpg?v=1689761261&width=416', '1199', 5),
+
+('bags', 'American Tourister Casual Backpack – 32L Water Resistant', 'https://rukminim3.flixcart.com/image/850/1000/xif0q/backpack/z/s/k/13-fizz-sch-bag-8-6-ff9-0-01-001-backpack-american-tourister-32-original-imah7rdbw66xkagz.jpeg?q=90&crop=false', '1499', 4),
+
+('bags', 'Skybags School Backpack – Stylish 30L with Padded Straps', 'https://images.jdmagicbox.com/quickquotes/images_main/skybags-backpacks-10-09-2020-152-209984843-asne0.jpg', '1399', 5),
+
+('bags', 'Safari Small Travel Duffle Bag – Cabin Size with Shoulder Strap', 'https://www.sunrisetrading.in/wp-content/uploads/Safari-Duffle-Trolley-Tierra-Red-1.jpg', '999', 4);
+
+INSERT INTO SPECIALITY_CATEGORY (CATEGORY_ID, DESCRIPTION, IMAGE, PRICE, RATING) VALUES
+
+('bedsheets', 'Cotton Double Bedsheet with 2 Pillow Covers – Floral Print', 'https://m.media-amazon.com/images/I/71mkNFdUOPL._AC_UF894,1000_QL80_.jpg', '699', 5),
+
+('bedsheets', 'Microfiber King Size Bedsheet – Geometric Pattern', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRN1gH4H7vFuui1NgmzuoTI6qtvAKKUYMj67Q&s', '599', 4),
+
+('bedsheets', 'Jaipuri Cotton Printed Bedsheet – Queen Size Traditional Design', 'https://cdn-image.blitzshopdeck.in/ShopdeckCatalogue/tr:f-webp,w-600,fo-auto/63fc8c954cd61800137b7ce0/media/KILONA_HATI_BLUE_1697950842198_0s9n2g8tvcfio7w.jpg', '849', 5),
+
+('bedsheets', 'Double Bedsheet with Abstract Prints – 100% Cotton', 'https://m.media-amazon.com/images/I/91AibIoLzEL._AC_UF894,1000_QL80_.jpg', '749', 4);
 

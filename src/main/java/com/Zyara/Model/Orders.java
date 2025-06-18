@@ -16,7 +16,7 @@ public class Orders {
     @Id
     private int orderId;
     private String userEmail;
-    private int produtId;
+    private String produtId;
     private String status;
     private LocalDate localDate;
 }
