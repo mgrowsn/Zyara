@@ -115,7 +115,7 @@ public class CartService {
         existingAddress.setAddress(address.getPincode());
         existingAddress.setAddress(address.getState());
         existingAddress.setAddress(address.getLandmark());
-        addressRepo.save(address);
+        addressRepo.save(existingAddress);
         return "Address updated successfully";
     }
 
