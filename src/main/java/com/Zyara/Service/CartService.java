@@ -74,7 +74,7 @@ public class CartService {
             return "Sorry, Your Quantity exceeds available stock";
         }
         item.setQuantity(cartItem.getQuantity());
-        cartRepo.save(cartItem);
+        cartRepo.save(item);
         return "Cart item updated successfully";
     }
 
