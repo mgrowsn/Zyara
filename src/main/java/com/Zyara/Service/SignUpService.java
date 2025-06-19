@@ -3,6 +3,7 @@ package com.Zyara.Service;
 import com.Zyara.Model.SignUp;
 import com.Zyara.Repository.SignUpRepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -11,10 +12,15 @@ import java.util.List;
 public class SignUpService {
     @Autowired
     SignUpRepo signUpRepo;
+
+    @Autowired
+    PasswordEncoder passwordEncoder;
     public String signUp(SignUp signup) {
         if(!validateSignUp(signup).equals("Valid SignUp")){
             return validateSignUp(signup);
         }
+        signup.setPassword(passwordEncoder.encode(signup.getPassword()));
+        signup.setConfirmPassword(passwordEncoder.encode(signup.getConfirmPassword()));
         signUpRepo.save(signup);
         return "User signed up successfully";
     }
