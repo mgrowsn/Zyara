@@ -129,7 +129,7 @@ INSERT INTO item (id, name, sub_product_id) VALUES
 
   // 2) Electronics
 
-INSERT INTO products_category_category (id, name) VALUES ('electronics', 'Electronics');
+INSERT INTO product_category (id, name) VALUES ('electronics', 'Electronics');
 
 
 //electronics ka 1st dropdown
@@ -232,7 +232,7 @@ INSERT INTO item (id, name, sub_product_id) VALUES
 
 
 // 3) Home & Furniture
-INSERT INTO products_category_category (id, name) VALUES ('home-furniture', 'Home & Furniture');
+INSERT INTO products_category (id, name) VALUES ('home-furniture', 'Home & Furniture');
 
 //home-furniture ka 1st dropdown
 INSERT INTO sub_product (id, name, product_id) VALUES
@@ -289,7 +289,7 @@ INSERT INTO item (id, name, sub_product_id) VALUES
 
 
 // 4) Beauty, Toys & More
-INSERT INTO products_category (id, name) VALUES ('beauty-toys-more', 'Beauty, Toys & More');
+INSERT INTO product_category (id, name) VALUES ('beauty-toys-more', 'Beauty, Toys & More');
 
 
 //beauty-toys-more ka 1st dropdown
@@ -349,16 +349,16 @@ INSERT INTO item (id, name, sub_product_id) VALUES
 
 
 // 5) Kilos
-INSERT INTO products_category (id, name) VALUES ('kilos', 'Kilos');
+INSERT INTO product_category (id, name) VALUES ('kilos', 'Kilos');
 
 // 6) Mobiles
-INSERT INTO products_category (id, name) VALUES ('mobiles', 'Mobiles');
+INSERT INTO product_category (id, name) VALUES ('mobiles', 'Mobiles');
 
 // 7) Appliances
-INSERT INTO products_category (id, name) VALUES ('appliances', 'Appliances');
+INSERT INTO product_category (id, name) VALUES ('appliances', 'Appliances');
 
 //8) Flight Bookings
-INSERT INTO products_category (id, name) VALUES ('flight-bookings', 'Flight Bookings');
+INSERT INTO product_category (id, name) VALUES ('flight-bookings', 'Flight Bookings');
 
 
 
